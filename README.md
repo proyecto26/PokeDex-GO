@@ -5,7 +5,7 @@ Hello! I'm the Professor Oak, I am creating this app so you can start your Poké
 I want you to help me grow the community and have incredible adventures together!
 Now is your chance to talk to other nearby trainers from each team, create events to lead the greatest battles, share your experiences with other players and make friends wherever you go.
 
-Feel free to send your comments and/or suggestions to: pokedevsgo@gmail.com
+Feel free to send your comments and/or suggestions to: jdnichollsc@hotmail.com
 
 PokéDex Go is a community app and therefore relies on the contributions made by users.
 
