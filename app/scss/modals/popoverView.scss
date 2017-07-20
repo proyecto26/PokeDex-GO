@@ -1,0 +1,37 @@
+.popoverView{
+    .title{
+        right:0px !important;
+    }
+    .scroll{
+        height: 100%;
+        .slider {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            bottom: 0 !important;
+            right: 0 !important;
+            text-align: center;
+            
+            .slider-slide img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.popover-backdrop {
+    background-color: transparent !important;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: zoomInRight;
+    &.hide{
+        animation-duration: 0.8s;
+        display: block;
+        animation-name: zoomOutRight;
+    }
+}
+
+.popover-open .popover-backdrop{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}

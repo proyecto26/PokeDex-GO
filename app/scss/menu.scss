@@ -1,0 +1,60 @@
+.menu {
+
+    ion-header-bar {
+        border: none;
+        box-shadow: none;
+        min-height: 150px;
+        color: #fff;
+        padding: 0;
+        background-size: 100% 0px;
+        .item {
+            background: #ce1030;
+            border: none;
+            width: 100%;
+            padding-left: 120px;
+            padding-top: 45px;
+            img {
+                max-width: 100px !important;
+                top: 25% !important;
+                left: 10px !important;
+                height: 40% !important;
+                width: 28% !important;
+            }
+            h2 {
+                font-size: 35px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+    ion-content {
+        top: 150px !important;
+        background: #ce1030;
+        .item {
+            border: none;
+            background-color: transparent;
+            .item-content {
+                background-color: transparent;
+                color: white;
+            }
+        }
+        .item.active {
+            background-color: #dedede !important;
+            .item-content {
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.menu-open {
+    .menu {
+        ion-header-bar img {
+            animation-name: pulse;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <button class="button button-icon ion-close" ng-click="closeModal();"></button>
+        <h1 class="title">{{multipleSelect.title}}</h1>
+        <button class="button button-icon ion-checkmark" ng-click="saveOptions();"></button>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <ul class="list">
+            <li class="item item-toggle" ng-repeat="option in multipleSelect.tempOptions" ng-if="!multipleSelect.renderCheckbox">
+                {{ option[multipleSelect.valueProperty] }}
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" ng-model="option[multipleSelect.selectedProperty]">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-checkbox" ng-repeat="option in multipleSelect.tempOptions" ng-if="multipleSelect.renderCheckbox">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="option[multipleSelect.selectedProperty]">
+                </label>
+                {{ option[multipleSelect.valueProperty] }}
+            </li>
+        </ul>
+    </ion-content>
+</ion-modal-view>

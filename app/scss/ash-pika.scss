@@ -1,0 +1,843 @@
+//https://codepen.io/kevinjannis/pen/GyCgn?editors=0100
+
+$size: 2px;
+
+/* Black and white, like the old days */
+// $ash-line: #181818;
+// $ash-hat: #cdcdcd;
+// $ash-hat-front: #f9f9f9;
+// $ash-face: #fdfdfd;
+// $ash-mouth: #cdcdcd;
+// $ash-backpack: #cdcdcd;
+// $ash-hand: #fdfdfd;
+// $ash-pants: #cdcdcd;
+// $ash-shoes: #cdcdcd;
+
+// $pikachu-line: #181818;
+// $pikachu-body: #f8f8f8;
+// $pikachu-cheeck: #c0c0c0;
+// $pikachu-tail: #c0c0c0;
+
+/* In HD colors ;) */
+
+$ash-line: #181818;
+$ash-hat: #e31613;
+$ash-hat-front: #f7f7f7;
+$ash-face: #f0c3aa;
+$ash-mouth: #f0c3aa;
+$ash-backpack: #037efb;
+$ash-hand: #f0c3aa;
+$ash-pants: #ffffff;
+$ash-shoes: #ffffff;
+
+$pikachu-line: #181818;
+$pikachu-body: #fefe00;
+$pikachu-cheeck: #fe4100;
+$pikachu-tail: #823e00;
+
+
+
+#ash,
+#pikachu {
+  position: relative;
+  display: inline-block;
+  margin: 0 4px;
+  overflow: hidden;
+  position: absolute;
+  top:4px;
+  right: 35px;
+  
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    
+    width: $size;
+    height: $size;
+    
+    top: 0;
+    left: 0;
+  }
+  
+  &:before {
+    // When animations is not supported
+    margin-left: $size * 30;
+  }
+}
+
+#ash {
+  width: $size * 13;
+  height: $size * 16;
+  right: 0;
+  
+  &:before {
+    box-shadow:
+      // Row 1
+      $size * 3 $size 0 0 $ash-line,
+      $size * 4 $size 0 0 $ash-line,
+      $size * 5 $size 0 0 $ash-line,
+      $size * 6 $size 0 0 $ash-line,
+      $size * 7 $size 0 0 $ash-line,
+      $size * 8 $size 0 0 $ash-line,
+      
+      // Row 2
+      $size * 2 $size * 2 0 0 $ash-line,
+      $size * 3 $size * 2 0 0 $ash-hat,
+      $size * 4 $size * 2 0 0 $ash-hat,
+      $size * 5 $size * 2 0 0 $ash-hat,
+      $size * 6 $size * 2 0 0 $ash-hat,
+      $size * 7 $size * 2 0 0 $ash-hat,
+      $size * 8 $size * 2 0 0 $ash-hat,
+      $size * 9 $size * 2 0 0 $ash-line,
+      
+      // Row 3
+      $size $size * 3 0 0 $ash-line,
+      $size * 2 $size * 3 0 0 $ash-hat,
+      $size * 3 $size * 3 0 0 $ash-hat,
+      $size * 4 $size * 3 0 0 $ash-hat,
+      $size * 5 $size * 3 0 0 $ash-hat,
+      $size * 6 $size * 3 0 0 $ash-hat,
+      $size * 7 $size * 3 0 0 $ash-hat,
+      $size * 8 $size * 3 0 0 $ash-hat,
+      $size * 9 $size * 3 0 0 $ash-hat,
+      $size * 10 $size * 3 0 0 $ash-line,
+      
+      // Row 4
+      $size $size * 4 0 0 $ash-line,
+      $size * 2 $size * 4 0 0 $ash-hat,
+      $size * 3 $size * 4 0 0 $ash-hat,
+      $size * 4 $size * 4 0 0 $ash-hat,
+      $size * 5 $size * 4 0 0 $ash-hat,
+      $size * 6 $size * 4 0 0 $ash-hat,
+      $size * 7 $size * 4 0 0 $ash-hat,
+      $size * 8 $size * 4 0 0 $ash-hat,
+      $size * 9 $size * 4 0 0 $ash-hat-front,
+      $size * 10 $size * 4 0 0 $ash-line,
+      $size * 11 $size * 4 0 0 $ash-line,
+      
+      // Row 5
+      0 $size * 5 0 0 $ash-line,
+      $size $size * 5 0 0 $ash-line,
+      $size * 2 $size * 5 0 0 $ash-line,
+      $size * 3 $size * 5 0 0 $ash-hat,
+      $size * 4 $size * 5 0 0 $ash-hat,
+      $size * 5 $size * 5 0 0 $ash-hat,
+      $size * 6 $size * 5 0 0 $ash-hat,
+      $size * 7 $size * 5 0 0 $ash-hat,
+      $size * 8 $size * 5 0 0 $ash-hat-front,
+      $size * 9 $size * 5 0 0 $ash-hat-front,
+      $size * 10 $size * 5 0 0 $ash-hat-front,
+      $size * 11 $size * 5 0 0 $ash-hat-front,
+      $size * 12 $size * 5 0 0 $ash-line,
+      
+      // Row 6
+      0 $size * 6 0 0 $ash-line,
+      $size $size * 6 0 0 $ash-line,
+      $size * 2 $size * 6 0 0 $ash-line,
+      $size * 3 $size * 6 0 0 $ash-line,
+      $size * 4 $size * 6 0 0 $ash-line,
+      $size * 5 $size * 6 0 0 $ash-line,
+      $size * 6 $size * 6 0 0 $ash-line,
+      $size * 7 $size * 6 0 0 $ash-hat,
+      $size * 8 $size * 6 0 0 $ash-hat,
+      $size * 9 $size * 6 0 0 $ash-hat,
+      $size * 10 $size * 6 0 0 $ash-line,
+      $size * 11 $size * 6 0 0 $ash-line,
+      
+      // Row 7
+      0 $size * 7 0 0 $ash-line,
+      $size $size * 7 0 0 $ash-line,
+      $size * 2 $size * 7 0 0 $ash-line,
+      $size * 3 $size * 7 0 0 $ash-line,
+      $size * 4 $size * 7 0 0 $ash-line,
+      $size * 5 $size * 7 0 0 $ash-line,
+      $size * 6 $size * 7 0 0 $ash-face,
+      $size * 7 $size * 7 0 0 $ash-face,
+      $size * 8 $size * 7 0 0 $ash-line,
+      $size * 9 $size * 7 0 0 $ash-face,
+      $size * 10 $size * 7 0 0 $ash-line,
+      
+      // Row 8
+      $size $size * 8 0 0 $ash-line,
+      $size * 2 $size * 8 0 0 $ash-line,
+      $size * 3 $size * 8 0 0 $ash-face,
+      $size * 4 $size * 8 0 0 $ash-face,
+      $size * 5 $size * 8 0 0 $ash-line,
+      $size * 6 $size * 8 0 0 $ash-face,
+      $size * 7 $size * 8 0 0 $ash-face,
+      $size * 8 $size * 8 0 0 $ash-line,
+      $size * 9 $size * 8 0 0 $ash-face,
+      $size * 10 $size * 8 0 0 $ash-line,
+      
+      // Row 9
+      $size * 2 $size * 9 0 0 $ash-line,
+      $size * 3 $size * 9 0 0 $ash-face,
+      $size * 4 $size * 9 0 0 $ash-face,
+      $size * 5 $size * 9 0 0 $ash-face,
+      $size * 6 $size * 9 0 0 $ash-face,
+      $size * 7 $size * 9 0 0 $ash-face,
+      $size * 8 $size * 9 0 0 $ash-face,
+      $size * 9 $size * 9 0 0 $ash-face,
+      $size * 10 $size * 9 0 0 $ash-line,
+      
+      // Row 10
+      $size $size * 10 0 0 $ash-line,
+      $size * 2 $size * 10 0 0 $ash-backpack,
+      $size * 3 $size * 10 0 0 $ash-line,
+      $size * 4 $size * 10 0 0 $ash-line,
+      $size * 5 $size * 10 0 0 $ash-face,
+      $size * 6 $size * 10 0 0 $ash-face,
+      $size * 7 $size * 10 0 0 $ash-face,
+      $size * 8 $size * 10 0 0 $ash-mouth,
+      $size * 9 $size * 10 0 0 $ash-line,
+      
+      // Row 11
+      $size $size * 11 0 0 $ash-line,
+      $size * 2 $size * 11 0 0 $ash-backpack,
+      $size * 3 $size * 11 0 0 $ash-line,
+      $size * 4 $size * 11 0 0 $ash-line,
+      $size * 5 $size * 11 0 0 $ash-line,
+      $size * 6 $size * 11 0 0 $ash-line,
+      $size * 7 $size * 11 0 0 $ash-line,
+      $size * 8 $size * 11 0 0 $ash-line,
+      
+      // Row 12
+      $size $size * 12 0 0 $ash-line,
+      $size * 2 $size * 12 0 0 $ash-line,
+      $size * 3 $size * 12 0 0 $ash-hand,
+      $size * 4 $size * 12 0 0 $ash-hand,
+      $size * 5 $size * 12 0 0 $ash-line,
+      $size * 6 $size * 12 0 0 $ash-line,
+      $size * 7 $size * 12 0 0 $ash-line,
+      $size * 8 $size * 12 0 0 $ash-line,
+      $size * 9 $size * 12 0 0 $ash-line,
+      $size * 10 $size * 12 0 0 $ash-line,
+      
+      // Row 13
+      0 $size * 13 0 0 $ash-line,
+      $size $size * 13 0 0 $ash-shoes,
+      $size * 2 $size * 13 0 0 $ash-line,
+      $size * 3 $size * 13 0 0 $ash-hand,
+      $size * 4 $size * 13 0 0 $ash-hand,
+      $size * 5 $size * 13 0 0 $ash-line,
+      $size * 6 $size * 13 0 0 $ash-pants,
+      $size * 7 $size * 13 0 0 $ash-pants,
+      $size * 8 $size * 13 0 0 $ash-line,
+      $size * 9 $size * 13 0 0 $ash-shoes,
+      $size * 10 $size * 13 0 0 $ash-shoes,
+      $size * 11 $size * 13 0 0 $ash-line,
+      
+      // Row 14
+      0 $size * 14 0 0 $ash-line,
+      $size $size * 14 0 0 $ash-shoes,
+      $size * 2 $size * 14 0 0 $ash-shoes,
+      $size * 3 $size * 14 0 0 $ash-line,
+      $size * 4 $size * 14 0 0 $ash-line,
+      $size * 5 $size * 14 0 0 $ash-line,
+      $size * 6 $size * 14 0 0 $ash-line,
+      $size * 7 $size * 14 0 0 $ash-line,
+      $size * 8 $size * 14 0 0 $ash-shoes,
+      $size * 9 $size * 14 0 0 $ash-shoes,
+      $size * 10 $size * 14 0 0 $ash-line,
+      
+      // Row 15
+      $size $size * 15 0 0 $ash-line,
+      $size * 2 $size * 15 0 0 $ash-line,
+      $size * 7 $size * 15 0 0 $ash-line,
+      $size * 8 $size * 15 0 0 $ash-line,
+      $size * 9 $size * 15 0 0 $ash-line
+    ;
+  }
+  
+  &:after {
+    box-shadow:
+      // Row 0
+      $size * 3 0 0 0 $ash-line,
+      $size * 4 0 0 0 $ash-line,
+      $size * 5 0 0 0 $ash-line,
+      $size * 6 0 0 0 $ash-line,
+      $size * 7 0 0 0 $ash-line,
+      $size * 8 0 0 0 $ash-line,
+      
+      // Row 1
+      $size * 2 $size 0 0 $ash-line,
+      $size * 3 $size 0 0 $ash-hat,
+      $size * 4 $size 0 0 $ash-hat,
+      $size * 5 $size 0 0 $ash-hat,
+      $size * 6 $size 0 0 $ash-hat,
+      $size * 7 $size 0 0 $ash-hat,
+      $size * 8 $size 0 0 $ash-hat,
+      $size * 9 $size 0 0 $ash-line,
+      
+      // Row 2
+      $size $size * 2 0 0 $ash-line,
+      $size * 2 $size * 2 0 0 $ash-hat,
+      $size * 3 $size * 2 0 0 $ash-hat,
+      $size * 4 $size * 2 0 0 $ash-hat,
+      $size * 5 $size * 2 0 0 $ash-hat,
+      $size * 6 $size * 2 0 0 $ash-hat,
+      $size * 7 $size * 2 0 0 $ash-hat,
+      $size * 8 $size * 2 0 0 $ash-hat,
+      $size * 9 $size * 2 0 0 $ash-hat,
+      $size * 10 $size * 2 0 0 $ash-line,
+      
+      // Row 3
+      $size $size * 3 0 0 $ash-line,
+      $size * 2 $size * 3 0 0 $ash-hat,
+      $size * 3 $size * 3 0 0 $ash-hat,
+      $size * 4 $size * 3 0 0 $ash-hat,
+      $size * 5 $size * 3 0 0 $ash-hat,
+      $size * 6 $size * 3 0 0 $ash-hat,
+      $size * 7 $size * 3 0 0 $ash-hat,
+      $size * 8 $size * 3 0 0 $ash-hat,
+      $size * 9 $size * 3 0 0 $ash-hat-front,
+      $size * 10 $size * 3 0 0 $ash-line,
+      $size * 11 $size * 3 0 0 $ash-line,
+      
+      // Row 4
+      0 $size * 4 0 0 $ash-line,
+      $size $size * 4 0 0 $ash-line,
+      $size * 2 $size * 4 0 0 $ash-line,
+      $size * 3 $size * 4 0 0 $ash-hat,
+      $size * 4 $size * 4 0 0 $ash-hat,
+      $size * 5 $size * 4 0 0 $ash-hat,
+      $size * 6 $size * 4 0 0 $ash-hat,
+      $size * 7 $size * 4 0 0 $ash-hat,
+      $size * 8 $size * 4 0 0 $ash-hat-front,
+      $size * 9 $size * 4 0 0 $ash-hat-front,
+      $size * 10 $size * 4 0 0 $ash-hat-front,
+      $size * 11 $size * 4 0 0 $ash-hat-front,
+      $size * 12 $size * 4 0 0 $ash-line,
+      
+      // Row 5
+      0 $size * 5 0 0 $ash-line,
+      $size $size * 5 0 0 $ash-line,
+      $size * 2 $size * 5 0 0 $ash-line,
+      $size * 3 $size * 5 0 0 $ash-line,
+      $size * 4 $size * 5 0 0 $ash-line,
+      $size * 5 $size * 5 0 0 $ash-line,
+      $size * 6 $size * 5 0 0 $ash-line,
+      $size * 7 $size * 5 0 0 $ash-hat,
+      $size * 8 $size * 5 0 0 $ash-hat,
+      $size * 9 $size * 5 0 0 $ash-hat,
+      $size * 10 $size * 5 0 0 $ash-line,
+      $size * 11 $size * 5 0 0 $ash-line,
+      
+      // Row 6
+      0 $size * 6 0 0 $ash-line,
+      $size $size * 6 0 0 $ash-line,
+      $size * 2 $size * 6 0 0 $ash-line,
+      $size * 3 $size * 6 0 0 $ash-line,
+      $size * 4 $size * 6 0 0 $ash-line,
+      $size * 5 $size * 6 0 0 $ash-line,
+      $size * 6 $size * 6 0 0 $ash-face,
+      $size * 7 $size * 6 0 0 $ash-face,
+      $size * 8 $size * 6 0 0 $ash-line,
+      $size * 9 $size * 6 0 0 $ash-face,
+      $size * 10 $size * 6 0 0 $ash-line,
+      
+      // Row 7
+      $size $size * 7 0 0 $ash-line,
+      $size * 2 $size * 7 0 0 $ash-line,
+      $size * 3 $size * 7 0 0 $ash-face,
+      $size * 4 $size * 7 0 0 $ash-face,
+      $size * 5 $size * 7 0 0 $ash-line,
+      $size * 6 $size * 7 0 0 $ash-face,
+      $size * 7 $size * 7 0 0 $ash-face,
+      $size * 8 $size * 7 0 0 $ash-line,
+      $size * 9 $size * 7 0 0 $ash-face,
+      $size * 10 $size * 7 0 0 $ash-line,
+      
+      // Row 8
+      $size * 2 $size * 8 0 0 $ash-line,
+      $size * 3 $size * 8 0 0 $ash-face,
+      $size * 4 $size * 8 0 0 $ash-face,
+      $size * 5 $size * 8 0 0 $ash-face,
+      $size * 6 $size * 8 0 0 $ash-face,
+      $size * 7 $size * 8 0 0 $ash-face,
+      $size * 8 $size * 8 0 0 $ash-face,
+      $size * 9 $size * 8 0 0 $ash-face,
+      $size * 10 $size * 8 0 0 $ash-line,
+      
+      // Row 9
+      $size $size * 9 0 0 $ash-line,
+      $size * 2 $size * 9 0 0 $ash-backpack,
+      $size * 3 $size * 9 0 0 $ash-line,
+      $size * 4 $size * 9 0 0 $ash-line,
+      $size * 5 $size * 9 0 0 $ash-face,
+      $size * 6 $size * 9 0 0 $ash-face,
+      $size * 7 $size * 9 0 0 $ash-face,
+      $size * 8 $size * 9 0 0 $ash-mouth,
+      $size * 9 $size * 9 0 0 $ash-line,
+      
+      // Row 10
+      $size $size * 10 0 0 $ash-line,
+      $size * 2 $size * 10 0 0 $ash-backpack,
+      $size * 3 $size * 10 0 0 $ash-backpack,
+      $size * 4 $size * 10 0 0 $ash-line,
+      $size * 5 $size * 10 0 0 $ash-line,
+      $size * 6 $size * 10 0 0 $ash-line,
+      $size * 7 $size * 10 0 0 $ash-line,
+      $size * 8 $size * 10 0 0 $ash-line,
+      
+      // Row 11
+      $size $size * 11 0 0 $ash-line,
+      $size * 2 $size * 11 0 0 $ash-backpack,
+      $size * 3 $size * 11 0 0 $ash-line,
+      $size * 4 $size * 11 0 0 $ash-hand,
+      $size * 5 $size * 11 0 0 $ash-hand,
+      $size * 6 $size * 11 0 0 $ash-line,
+      $size * 7 $size * 11 0 0 $ash-line,
+      
+      // Row 12
+      $size $size * 12 0 0 $ash-line,
+      $size * 2 $size * 12 0 0 $ash-backpack,
+      $size * 3 $size * 12 0 0 $ash-line,
+      $size * 4 $size * 12 0 0 $ash-hand,
+      $size * 5 $size * 12 0 0 $ash-hand,
+      $size * 6 $size * 12 0 0 $ash-line,
+      $size * 7 $size * 12 0 0 $ash-line,
+      
+      // Row 13
+      $size * 2 $size * 13 0 0 $ash-line,
+      $size * 3 $size * 13 0 0 $ash-line,
+      $size * 4 $size * 13 0 0 $ash-line,
+      $size * 5 $size * 13 0 0 $ash-line,
+      $size * 6 $size * 13 0 0 $ash-pants,
+      $size * 7 $size * 13 0 0 $ash-pants,
+      $size * 8 $size * 13 0 0 $ash-line,
+      
+      // Row 14
+      $size * 3 $size * 14 0 0 $ash-line,
+      $size * 4 $size * 14 0 0 $ash-pants,
+      $size * 5 $size * 14 0 0 $ash-pants,
+      $size * 6 $size * 14 0 0 $ash-pants,
+      $size * 7 $size * 14 0 0 $ash-pants,
+      $size * 8 $size * 14 0 0 $ash-line,
+      
+      // Row 15
+      $size * 4 $size * 15 0 0 $ash-line,
+      $size * 5 $size * 15 0 0 $ash-line,
+      $size * 6 $size * 15 0 0 $ash-line,
+      $size * 7 $size * 15 0 0 $ash-line
+    ;
+  }
+}
+
+#pikachu {
+  width: $size * 15;
+  height: $size * 16;
+  
+  &:before {
+    box-shadow:
+      // Row 0
+      $size * 4 $size 0 0 $pikachu-line,
+      $size * 5 $size 0 0 $pikachu-line,
+      
+      // Row 1
+      0 $size * 2 0 0 $pikachu-line,
+      $size $size * 2 0 0 $pikachu-line,
+      $size * 2 $size * 2 0 0 $pikachu-line,
+      $size * 3 $size * 2 0 0 $pikachu-line,
+      $size * 4 $size * 2 0 0 $pikachu-line,
+      $size * 5 $size * 2 0 0 $pikachu-line,
+      $size * 6 $size * 2 0 0 $pikachu-line,
+      $size * 7 $size * 2 0 0 $pikachu-line,
+      $size * 8 $size * 2 0 0 $pikachu-line,
+      
+      // Row 2
+      0 $size * 3 0 0 $pikachu-line,
+      $size $size * 3 0 0 $pikachu-body,
+      $size * 2 $size * 3 0 0 $pikachu-body,
+      $size * 3 $size * 3 0 0 $pikachu-body,
+      $size * 4 $size * 3 0 0 $pikachu-line,
+      $size * 5 $size * 3 0 0 $pikachu-line,
+      $size * 6 $size * 3 0 0 $pikachu-line,
+      $size * 7 $size * 3 0 0 $pikachu-body,
+      $size * 8 $size * 3 0 0 $pikachu-body,
+      $size * 9 $size * 3 0 0 $pikachu-line,
+      $size * 10 $size * 3 0 0 $pikachu-line,
+      $size * 11 $size * 3 0 0 $pikachu-line,
+      
+      // Row 3
+      $size $size * 4 0 0 $pikachu-line,
+      $size * 2 $size * 4 0 0 $pikachu-body,
+      $size * 3 $size * 4 0 0 $pikachu-body,
+      $size * 4 $size * 4 0 0 $pikachu-body,
+      $size * 5 $size * 4 0 0 $pikachu-line,
+      $size * 6 $size * 4 0 0 $pikachu-body,
+      $size * 7 $size * 4 0 0 $pikachu-body,
+      $size * 8 $size * 4 0 0 $pikachu-body,
+      $size * 9 $size * 4 0 0 $pikachu-body,
+      $size * 10 $size * 4 0 0 $pikachu-body,
+      $size * 11 $size * 4 0 0 $pikachu-body,
+      $size * 12 $size * 4 0 0 $pikachu-line,
+      
+      // Row 4
+      $size * 2 $size * 5 0 0 $pikachu-line,
+      $size * 3 $size * 5 0 0 $pikachu-body,
+      $size * 4 $size * 5 0 0 $pikachu-body,
+      $size * 5 $size * 5 0 0 $pikachu-line,
+      $size * 6 $size * 5 0 0 $pikachu-line,
+      $size * 7 $size * 5 0 0 $pikachu-body,
+      $size * 8 $size * 5 0 0 $pikachu-body,
+      $size * 9 $size * 5 0 0 $pikachu-body,
+      $size * 10 $size * 5 0 0 $pikachu-body,
+      $size * 11 $size * 5 0 0 $pikachu-body,
+      $size * 12 $size * 5 0 0 $pikachu-body,
+      $size * 13 $size * 5 0 0 $pikachu-line,
+      
+      // Row 5
+      $size * 3 $size * 6 0 0 $pikachu-line,
+      $size * 4 $size * 6 0 0 $pikachu-body,
+      $size * 5 $size * 6 0 0 $pikachu-body,
+      $size * 6 $size * 6 0 0 $pikachu-line,
+      $size * 7 $size * 6 0 0 $pikachu-body,
+      $size * 8 $size * 6 0 0 $pikachu-body,
+      $size * 9 $size * 6 0 0 $pikachu-body,
+      $size * 10 $size * 6 0 0 $pikachu-body,
+      $size * 11 $size * 6 0 0 $pikachu-body,
+      $size * 12 $size * 6 0 0 $pikachu-body,
+      $size * 13 $size * 6 0 0 $pikachu-line,
+      
+      // Row 6
+      $size $size * 7 0 0 $pikachu-line,
+      $size * 2 $size * 7 0 0 $pikachu-line,
+      $size * 3 $size * 7 0 0 $pikachu-line,
+      $size * 4 $size * 7 0 0 $pikachu-body,
+      $size * 5 $size * 7 0 0 $pikachu-line,
+      $size * 6 $size * 7 0 0 $pikachu-body,
+      $size * 7 $size * 7 0 0 $pikachu-body,
+      $size * 8 $size * 7 0 0 $pikachu-body,
+      $size * 9 $size * 7 0 0 $pikachu-body,
+      $size * 10 $size * 7 0 0 $pikachu-body,
+      $size * 11 $size * 7 0 0 $pikachu-line,
+      $size * 12 $size * 7 0 0 $pikachu-body,
+      $size * 13 $size * 7 0 0 $pikachu-body,
+      $size * 14 $size * 7 0 0 $pikachu-line,
+      
+      // Row 7
+      $size $size * 8 0 0 $pikachu-line,
+      $size * 2 $size * 8 0 0 $pikachu-body,
+      $size * 3 $size * 8 0 0 $pikachu-body,
+      $size * 4 $size * 8 0 0 $pikachu-line,
+      $size * 5 $size * 8 0 0 $pikachu-line,
+      $size * 6 $size * 8 0 0 $pikachu-body,
+      $size * 7 $size * 8 0 0 $pikachu-body,
+      $size * 8 $size * 8 0 0 $pikachu-body,
+      $size * 9 $size * 8 0 0 $pikachu-cheeck,
+      $size * 10 $size * 8 0 0 $pikachu-body,
+      $size * 11 $size * 8 0 0 $pikachu-body,
+      $size * 12 $size * 8 0 0 $pikachu-body,
+      $size * 13 $size * 8 0 0 $pikachu-body,
+      $size * 14 $size * 8 0 0 $pikachu-line,
+      
+      // Row 8
+      $size * 2 $size * 9 0 0 $pikachu-line,
+      $size * 3 $size * 9 0 0 $pikachu-tail,
+      $size * 4 $size * 9 0 0 $pikachu-line,
+      $size * 5 $size * 9 0 0 $pikachu-tail,
+      $size * 6 $size * 9 0 0 $pikachu-tail,
+      $size * 7 $size * 9 0 0 $pikachu-tail,
+      $size * 8 $size * 9 0 0 $pikachu-body,
+      $size * 9 $size * 9 0 0 $pikachu-body,
+      $size * 10 $size * 9 0 0 $pikachu-body,
+      $size * 11 $size * 9 0 0 $pikachu-body,
+      $size * 12 $size * 9 0 0 $pikachu-body,
+      $size * 13 $size * 9 0 0 $pikachu-line,
+      
+      // Row 9
+      $size $size * 10 0 0 $pikachu-line,
+      $size * 2 $size * 10 0 0 $pikachu-tail,
+      $size * 3 $size * 10 0 0 $pikachu-tail,
+      $size * 4 $size * 10 0 0 $pikachu-line,
+      $size * 5 $size * 10 0 0 $pikachu-body,
+      $size * 6 $size * 10 0 0 $pikachu-body,
+      $size * 7 $size * 10 0 0 $pikachu-body,
+      $size * 8 $size * 10 0 0 $pikachu-body,
+      $size * 9 $size * 10 0 0 $pikachu-body,
+      $size * 10 $size * 10 0 0 $pikachu-body,
+      $size * 11 $size * 10 0 0 $pikachu-line,
+      $size * 12 $size * 10 0 0 $pikachu-body,
+      $size * 13 $size * 10 0 0 $pikachu-line,
+      
+      // Row 10
+      $size * 2 $size * 11 0 0 $pikachu-line,
+      $size * 3 $size * 11 0 0 $pikachu-tail,
+      $size * 4 $size * 11 0 0 $pikachu-line,
+      $size * 5 $size * 11 0 0 $pikachu-tail,
+      $size * 6 $size * 11 0 0 $pikachu-tail,
+      $size * 7 $size * 11 0 0 $pikachu-tail,
+      $size * 8 $size * 11 0 0 $pikachu-body,
+      $size * 9 $size * 11 0 0 $pikachu-body,
+      $size * 10 $size * 11 0 0 $pikachu-line,
+      $size * 11 $size * 11 0 0 $pikachu-line,
+      $size * 12 $size * 11 0 0 $pikachu-body,
+      $size * 13 $size * 11 0 0 $pikachu-line,
+      
+      // Row 11
+      $size * 3 $size * 12 0 0 $pikachu-line,
+      $size * 4 $size * 12 0 0 $pikachu-line,
+      $size * 5 $size * 12 0 0 $pikachu-line,
+      $size * 6 $size * 12 0 0 $pikachu-body,
+      $size * 7 $size * 12 0 0 $pikachu-body,
+      $size * 8 $size * 12 0 0 $pikachu-body,
+      $size * 9 $size * 12 0 0 $pikachu-body,
+      $size * 10 $size * 12 0 0 $pikachu-body,
+      $size * 11 $size * 12 0 0 $pikachu-body,
+      $size * 12 $size * 12 0 0 $pikachu-line,
+      $size * 13 $size * 12 0 0 $pikachu-line,
+      
+      // Row 12
+      $size * 3 $size * 13 0 0 $pikachu-line,
+      $size * 4 $size * 13 0 0 $pikachu-body,
+      $size * 5 $size * 13 0 0 $pikachu-line,
+      $size * 6 $size * 13 0 0 $pikachu-line,
+      $size * 7 $size * 13 0 0 $pikachu-body,
+      $size * 8 $size * 13 0 0 $pikachu-body,
+      $size * 9 $size * 13 0 0 $pikachu-body,
+      $size * 10 $size * 13 0 0 $pikachu-body,
+      $size * 11 $size * 13 0 0 $pikachu-line,
+      $size * 12 $size * 13 0 0 $pikachu-body,
+      $size * 13 $size * 13 0 0 $pikachu-body,
+      $size * 14 $size * 13 0 0 $pikachu-line,
+      
+      // Row 13
+      $size * 4 $size * 14 0 0 $pikachu-line,
+      $size * 5 $size * 14 0 0 $pikachu-body,
+      $size * 6 $size * 14 0 0 $pikachu-body,
+      $size * 7 $size * 14 0 0 $pikachu-line,
+      $size * 8 $size * 14 0 0 $pikachu-line,
+      $size * 9 $size * 14 0 0 $pikachu-line,
+      $size * 10 $size * 14 0 0 $pikachu-line,
+      $size * 12 $size * 14 0 0 $pikachu-line,
+      $size * 13 $size * 14 0 0 $pikachu-line,
+      
+      // Row 13
+      $size * 5 $size * 15 0 0 $pikachu-line,
+      $size * 6 $size * 15 0 0 $pikachu-line
+    ;
+  }
+  
+  &:after {
+    box-shadow:
+      // Row 0
+      $size * 4 $size * 2 0 0 $pikachu-line,
+      $size * 5 $size * 2 0 0 $pikachu-line,
+      
+      // Row 1
+      0 $size * 3 0 0 $pikachu-line,
+      $size * 1 $size * 3 0 0 $pikachu-line,
+      $size * 2 $size * 3 0 0 $pikachu-line,
+      $size * 3 $size * 3 0 0 $pikachu-line,
+      $size * 4 $size * 3 0 0 $pikachu-line,
+      $size * 5 $size * 3 0 0 $pikachu-line,
+      $size * 6 $size * 3 0 0 $pikachu-line,
+      $size * 7 $size * 3 0 0 $pikachu-line,
+      $size * 8 $size * 3 0 0 $pikachu-line,
+      
+      // Row 2
+      0 $size * 4 0 0 $pikachu-line,
+      $size $size * 4 0 0 $pikachu-body,
+      $size * 2 $size * 4 0 0 $pikachu-body,
+      $size * 3 $size * 4 0 0 $pikachu-body,
+      $size * 4 $size * 4 0 0 $pikachu-line,
+      $size * 5 $size * 4 0 0 $pikachu-line,
+      $size * 6 $size * 4 0 0 $pikachu-line,
+      $size * 7 $size * 4 0 0 $pikachu-body,
+      $size * 8 $size * 4 0 0 $pikachu-body,
+      $size * 9 $size * 4 0 0 $pikachu-line,
+      $size * 10 $size * 4 0 0 $pikachu-line,
+      $size * 11 $size * 4 0 0 $pikachu-line,
+      
+      // Row 3
+      $size $size * 5 0 0 $pikachu-line,
+      $size * 2 $size * 5 0 0 $pikachu-body,
+      $size * 3 $size * 5 0 0 $pikachu-body,
+      $size * 4 $size * 5 0 0 $pikachu-body,
+      $size * 5 $size * 5 0 0 $pikachu-line,
+      $size * 6 $size * 5 0 0 $pikachu-body,
+      $size * 7 $size * 5 0 0 $pikachu-body,
+      $size * 8 $size * 5 0 0 $pikachu-body,
+      $size * 9 $size * 5 0 0 $pikachu-body,
+      $size * 10 $size * 5 0 0 $pikachu-body,
+      $size * 11 $size * 5 0 0 $pikachu-body,
+      $size * 12 $size * 5 0 0 $pikachu-line,
+      
+      // Row 4
+      $size * 2 $size * 6 0 0 $pikachu-line,
+      $size * 3 $size * 6 0 0 $pikachu-body,
+      $size * 4 $size * 6 0 0 $pikachu-body,
+      $size * 5 $size * 6 0 0 $pikachu-line,
+      $size * 6 $size * 6 0 0 $pikachu-line,
+      $size * 7 $size * 6 0 0 $pikachu-body,
+      $size * 8 $size * 6 0 0 $pikachu-body,
+      $size * 9 $size * 6 0 0 $pikachu-body,
+      $size * 10 $size * 6 0 0 $pikachu-body,
+      $size * 11 $size * 6 0 0 $pikachu-body,
+      $size * 12 $size * 6 0 0 $pikachu-body,
+      $size * 13 $size * 6 0 0 $pikachu-line,
+      
+      // Row 5
+      $size * 3 $size * 7 0 0 $pikachu-line,
+      $size * 4 $size * 7 0 0 $pikachu-body,
+      $size * 5 $size * 7 0 0 $pikachu-body,
+      $size * 6 $size * 7 0 0 $pikachu-line,
+      $size * 7 $size * 7 0 0 $pikachu-body,
+      $size * 8 $size * 7 0 0 $pikachu-body,
+      $size * 9 $size * 7 0 0 $pikachu-body,
+      $size * 10 $size * 7 0 0 $pikachu-body,
+      $size * 11 $size * 7 0 0 $pikachu-body,
+      $size * 12 $size * 7 0 0 $pikachu-body,
+      $size * 13 $size * 7 0 0 $pikachu-line,
+      
+      // Row 6
+      $size $size * 8 0 0 $pikachu-line,
+      $size * 2 $size * 8 0 0 $pikachu-line,
+      $size * 3 $size * 8 0 0 $pikachu-line,
+      $size * 4 $size * 8 0 0 $pikachu-body,
+      $size * 5 $size * 8 0 0 $pikachu-line,
+      $size * 6 $size * 8 0 0 $pikachu-body,
+      $size * 7 $size * 8 0 0 $pikachu-body,
+      $size * 8 $size * 8 0 0 $pikachu-body,
+      $size * 9 $size * 8 0 0 $pikachu-body,
+      $size * 10 $size * 8 0 0 $pikachu-body,
+      $size * 11 $size * 8 0 0 $pikachu-line,
+      $size * 12 $size * 8 0 0 $pikachu-body,
+      $size * 13 $size * 8 0 0 $pikachu-body,
+      $size * 14 $size * 8 0 0 $pikachu-line,
+      
+      // Row 7
+      $size $size * 9 0 0 $pikachu-line,
+      $size * 2 $size * 9 0 0 $pikachu-body,
+      $size * 3 $size * 9 0 0 $pikachu-body,
+      $size * 4 $size * 9 0 0 $pikachu-body,
+      $size * 5 $size * 9 0 0 $pikachu-line,
+      $size * 6 $size * 9 0 0 $pikachu-body,
+      $size * 7 $size * 9 0 0 $pikachu-body,
+      $size * 8 $size * 9 0 0 $pikachu-body,
+      $size * 9 $size * 9 0 0 $pikachu-cheeck,
+      $size * 10 $size * 9 0 0 $pikachu-body,
+      $size * 11 $size * 9 0 0 $pikachu-body,
+      $size * 12 $size * 9 0 0 $pikachu-body,
+      $size * 13 $size * 9 0 0 $pikachu-body,
+      $size * 14 $size * 9 0 0 $pikachu-line,
+      
+      // Row 8
+      $size * 2 $size * 10 0 0 $pikachu-line,
+      $size * 3 $size * 10 0 0 $pikachu-tail,
+      $size * 4 $size * 10 0 0 $pikachu-line,
+      $size * 5 $size * 10 0 0 $pikachu-tail,
+      $size * 6 $size * 10 0 0 $pikachu-tail,
+      $size * 7 $size * 10 0 0 $pikachu-tail,
+      $size * 8 $size * 10 0 0 $pikachu-body,
+      $size * 9 $size * 10 0 0 $pikachu-body,
+      $size * 10 $size * 10 0 0 $pikachu-body,
+      $size * 11 $size * 10 0 0 $pikachu-body,
+      $size * 12 $size * 10 0 0 $pikachu-body,
+      $size * 13 $size * 10 0 0 $pikachu-line,
+      
+      // Row 9
+      $size $size * 11 0 0 $pikachu-line,
+      $size * 2 $size * 11 0 0 $pikachu-tail,
+      $size * 3 $size * 11 0 0 $pikachu-tail,
+      $size * 4 $size * 11 0 0 $pikachu-line,
+      $size * 5 $size * 11 0 0 $pikachu-body,
+      $size * 6 $size * 11 0 0 $pikachu-body,
+      $size * 7 $size * 11 0 0 $pikachu-body,
+      $size * 8 $size * 11 0 0 $pikachu-body,
+      $size * 9 $size * 11 0 0 $pikachu-body,
+      $size * 10 $size * 11 0 0 $pikachu-body,
+      $size * 11 $size * 11 0 0 $pikachu-line,
+      $size * 12 $size * 11 0 0 $pikachu-body,
+      $size * 13 $size * 11 0 0 $pikachu-line,
+      
+      // Row 10
+      $size * 2 $size * 12 0 0 $pikachu-line,
+      $size * 3 $size * 12 0 0 $pikachu-tail,
+      $size * 4 $size * 12 0 0 $pikachu-line,
+      $size * 5 $size * 12 0 0 $pikachu-tail,
+      $size * 6 $size * 12 0 0 $pikachu-tail,
+      $size * 7 $size * 12 0 0 $pikachu-tail,
+      $size * 8 $size * 12 0 0 $pikachu-body,
+      $size * 9 $size * 12 0 0 $pikachu-body,
+      $size * 10 $size * 12 0 0 $pikachu-line,
+      $size * 11 $size * 12 0 0 $pikachu-line,
+      $size * 12 $size * 12 0 0 $pikachu-body,
+      $size * 13 $size * 12 0 0 $pikachu-line,
+      
+      // Row 11
+      $size * 3 $size * 13 0 0 $pikachu-line,
+      $size * 4 $size * 13 0 0 $pikachu-line,
+      $size * 5 $size * 13 0 0 $pikachu-line,
+      $size * 6 $size * 13 0 0 $pikachu-body,
+      $size * 7 $size * 13 0 0 $pikachu-body,
+      $size * 8 $size * 13 0 0 $pikachu-body,
+      $size * 9 $size * 13 0 0 $pikachu-body,
+      $size * 10 $size * 13 0 0 $pikachu-body,
+      $size * 11 $size * 13 0 0 $pikachu-body,
+      $size * 12 $size * 13 0 0 $pikachu-body,
+      $size * 13 $size * 13 0 0 $pikachu-line,
+      
+      // Row 12
+      $size * 6 $size * 14 0 0 $pikachu-line,
+      $size * 7 $size * 14 0 0 $pikachu-line,
+      $size * 8 $size * 14 0 0 $pikachu-body,
+      $size * 9 $size * 14 0 0 $pikachu-body,
+      $size * 10 $size * 14 0 0 $pikachu-body,
+      $size * 11 $size * 14 0 0 $pikachu-line,
+      $size * 12 $size * 14 0 0 $pikachu-line,
+      
+      // Row 13
+      $size * 8 $size * 15 0 0 $pikachu-line,
+      $size * 9 $size * 15 0 0 $pikachu-line,
+      $size * 10 $size * 15 0 0 $pikachu-line
+    ;
+  }
+}
+
+
+@mixin animation($value) {
+  animation: unquote($value);
+}
+
+@mixin animation-direction($value) {
+  animation-direction: unquote($value);
+}
+
+@mixin animation-duration($value) {
+  animation-duration: unquote($value);
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+}
+
+#ash,
+#pikachu {
+  &:before,
+  &:after {
+    @include animation(the-animation .4s infinite steps(2));
+  }
+  
+  &:after {
+    @include animation-direction(reverse);
+  }
+}
+
+#pikachu {
+  &:after,
+  &:before {
+    @include animation-duration(.2s);
+  }
+}
+
+@include keyframes(the-animation) {
+  0% {
+    margin-left: 0;
+  }
+  
+  100% {
+    margin-left: $size * 30;
+  }
+}

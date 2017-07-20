@@ -1,0 +1,15 @@
+.itemView{
+    background-repeat: round;
+
+    .IconBig {
+        animation-delay: 0.2s;
+    }
+
+    i {
+        animation-delay: 1.7s;
+    }
+
+    ion-content.animated {
+        animation-delay: 1.7s;
+    }
+}

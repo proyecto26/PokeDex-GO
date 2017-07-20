@@ -1,0 +1,38 @@
+.galleryView{
+    .item {
+        // box-shadow: 0 4px #13527A!important;
+        padding:3px;
+        div{
+            min-height: 130px;
+            padding-top: 35px;
+            width: 100%;
+            
+            .icon:before{
+                font-size: 90px;
+            }
+            
+            p{
+                color: white;
+                padding-top: 12px;
+            }
+        }
+    }
+    
+    .item.ng-enter-stagger {
+        animation-delay:200ms;
+        animation-duration:0;
+    }
+    
+    @for $i from 1 through 10{
+		.animated:nth-child(#{$i}){
+			animation-delay: #{$i * 0.25}s;
+		}
+	}
+    
+    .bold{
+        font-weight: bold;
+    }
+}
+.hidden{
+    visibility:hidden;
+}

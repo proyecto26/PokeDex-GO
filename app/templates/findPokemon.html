@@ -1,0 +1,22 @@
+<ion-view class="itemView" view-title="{{item.title | translate}}" ng-style="{ 'background-color': item.color }">
+	<div class="center-content animated slideInUp IconBig">
+        <i class="scroll icon {{item.icon}} animated fadeOut" style="font-size:22em;color:white;"></i>
+    </div>
+    <ion-content class="center-content animated bounceInUp padding">
+        <h2 style="color:#fff;">Find Pokémons</h2>
+        <div class="card">
+            <div class="list">
+                <ion-multiple-select options="names" class="item item-input item-select" title="Select Toppings" key-property="name" value-property="name" selected-property="selected">
+                    <div class="input-label">
+                        Pokemons
+                    </div>
+                </ion-multiple-select>
+                <ion-multiple-select options="types" class="item item-input item-select" title="Select Toppings" key-property="name" value-property="name" selected-property="all">
+                    <div class="input-label">
+                        Pokemon Types
+                    </div>
+                </ion-multiple-select>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

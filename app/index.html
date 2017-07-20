@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *;style-src * 'unsafe-inline';script-src * 'unsafe-inline';media-src *; img-src * data:;">
+    <title>Pokedex Go</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/ionic-animated-modal.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/bluebird.min.js"></script>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic.cloud.min.js"></script>
+    
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/firebase/firebase.js"></script>
+    <script src="lib/geofire/dist/geofire.min.js"></script>
+    <script src="lib/angularfire/dist/angularfire.min.js"></script> 
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="lib/ng-cordova-oauth/dist/ng-cordova-oauth.min.js"></script>
+    <script src="lib/moment/min/moment-with-locales.min.js"></script>
+    <script src="lib/angular-moment/angular-moment.min.js"></script>
+    <script src="lib/angular-elastic/elastic.js"></script>
+    <script src="lib/Autolinker.js/dist/Autolinker.min.js"></script>
+    <script src="build/app.js"></script>
+
+    <script src="cordova.js"></script>
+  </head>
+  <body ng-app="App" day-or-night>
+    <ion-nav-bar>
+    </ion-nav-bar>
+    <ion-nav-view animation="slide-left-right">
+    </ion-nav-view>
+  </body>
+</html>

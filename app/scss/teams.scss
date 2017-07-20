@@ -1,0 +1,24 @@
+.teamsView{
+    .item{
+        background-repeat: round;
+        background-color: transparent;
+    }
+    .card{
+        background-color: transparent;
+        box-shadow: none;
+
+        .item-image{
+            img:nth-child(1){
+                z-index:2;
+                position: relative;
+            }
+            img:nth-child(2){
+                position: absolute;
+                z-index: 1;
+                width: 80%;
+                left: 12%;
+                top: 10%;
+            }
+        }
+    }
+}

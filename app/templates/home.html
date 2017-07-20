@@ -1,0 +1,81 @@
+<ion-view view-title="" class="homeView">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="openPopover($event)">
+      <img ng-src="img/flags/{{currentLanguage}}.png" alt="language" style="width:32px;">
+    </button>
+    <a ng-if="$root.user" class="button button-clear" style="padding-right:0;" ng-click="logout()">
+      <img src="img/backpack.svg" alt="logout" style="width:32px;">
+    </a>
+  </ion-nav-buttons>
+  <div class="bar bar-subheader" style="background-color: transparent !important;text-align:right;border: none;background: transparent;">
+    <button ng-if="$root.showAds" class="animated flipInY removeAds button button-light icon-left ion-happy" ng-click="initStore()">
+      {{ 'removeAds' | translate }}
+    </button>
+    <img style="width:60px;" ng-if="$root.showAds === false" class="animated tada" src="img/insignia.svg">
+  </div>
+  <ion-content scroll="false">
+    <div class="city animated zoomIn" resize-height="250">
+
+      <div class="grass">
+        <ion-item  ng-repeat="item in items" class="img" ng-style="{ 'left' : item.left }" ng-click="openItem(item)">
+          <img ng-src="{{item.img}}">
+        </ion-item>
+        <div class="river"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="path"></div>
+        <div class="pathend"></div>
+        <div class="flower">
+          <span class="petal"></span>
+          <span class="petal"></span>
+          <span class="petal"></span>
+        </div>
+        <div class="longgrass"></div>
+        <div class="longgrass"></div>
+        <div class="flower2">
+          <span class="petal"></span>
+          <span class="petal"></span>
+          <span class="petal"></span>
+        </div>
+        <div class="flower3">
+          <span class="petal"></span>
+          <span class="petal"></span>
+          <span class="petal"></span>
+        </div>
+        <div class="house">
+          <div class="houseshadow"></div>
+          <div class="door"></div>
+          <div class="window"></div>
+          <div class="roof">
+            <div class="roofwindow"></div>
+            <!--roof-->
+          </div>
+          <!--house-->
+          <div class="pokeball"></div>
+
+        </div>
+        <!--grass-->
+        <div class="pikachu">
+          <div class="head"></div>
+          <div class="backfeet"></div>
+          <div class="frontfeet"></div>
+          <div style="width: 35px;height: 35px;cursor: pointer;left: -10px;top: -10px;position: absolute;" on-tap="playAudio()"></div>
+        </div>
+      </div>
+      <!--city-->
+    </div>
+    <!--<ion-list>
+        <div class="row row-wrap row-no-padding">
+          <ion-item ng-repeat="item in items" class="col col-50 animated flipInY" on-tap="openItem(item)">
+            <div class="button button-icon light ButtonBlue">
+              <i class="icon {{item.icon}}"></i>
+              <p class="bold">{{ item.title | translate }}</p>
+            </div>
+          </ion-item>
+        </div>
+      </ion-list>-->
+  </ion-content>
+</ion-view>

@@ -1,0 +1,67 @@
+<ion-view class="chatView">
+    <div class="bar bar-subheader">
+        <h5>{{ 'chatKm' | translate }}</h5>
+        <div id="pikachu"></div>
+        <div id="ash"></div>
+    </div>
+    <ion-content has-bouncing="true" class="has-header has-footer" on-scroll="checkScroll()" delegate-handle="userMessageScroll">
+
+        <div ng-repeat="message in messages | orderBy : 'date'" ng-init="$last && refreshScroll(user._id === message.userId)" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
+
+            <div ng-if="user._id !== message.userId">
+
+                <img class="profile-pic left" ng-src="{{message.pic || 'img/player.svg'}}" />
+
+                <div class="chat-bubble left">
+                    <img ng-click="photoBrowser(message)" ng-if="message.photo" ng-src="{{message.photo}}" ng-success="refreshScroll(scrollDown)" ng-error-src="{{ onProfilePicError() }}"/>
+                    <div ng-if="!message.photo" class="message" ng-bind-html="message.text | nl2br" autolinker>
+                    </div>
+
+                    <div class="message-detail">
+                        <span class="bold">{{message.username}}</span>,
+                        <span am-time-ago="message.date"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div ng-if="user._id === message.userId">
+
+                <img class="profile-pic right" ng-src="{{user.pic || 'img/player.svg'}}" />
+
+                <div class="chat-bubble right">
+                    <img ng-click="photoBrowser(message)" ng-if="message.photo" ng-src="{{message.photo}}" ng-success="refreshScroll($last)" ng-error-src="{{ onProfilePicError() }}"/>
+                    <div ng-if="!message.photo" class="message" ng-bind-html="message.text | nl2br" autolinker>
+                    </div>
+
+                    <div class="message-detail">
+                        <span class="bold">{{user.username}}</span>,
+                        <span am-time-ago="message.date"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cf"></div>
+
+        </div>
+    </ion-content>
+    <div class="progress-bar">
+        <div class="increment" ng-style="{ width: progressBar }" ng-show="progressBar"></div>
+    </div>
+    <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach style="height: auto; min-height:44px;z-index:13;">
+            <label class="item-input-wrapper">
+                <textarea ng-model="input.message" value="" placeholder="{{'sendMessage' | translate }}" required minlength="1" maxlength="1500" msd-elastic></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-images button-dark button-clear photo" type="button" ng-if="!input.message || input.message === ''" on-tap="sendPhoto()">
+                </button>
+                <button class="button button-icon icon ion-android-send footer-btn button-light button-clear" type="submit" ng-disabled="!input.message || input.message === ''">
+                </button>
+            </div>
+            <a ng-click="refreshScroll(true, 50)" ng-show="!scrollDown" class="scrollDownBtn button button-icon icon ion-android-arrow-dropdown-circle"></a>
+        </ion-footer-bar>
+    </form>
+</ion-view>

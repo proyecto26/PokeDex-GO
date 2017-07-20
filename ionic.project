@@ -1,0 +1,10 @@
+{
+  "name": "PokéDex Go",
+  "app_id": "8d5cd27d",
+  "gulpStartupTasks": [
+    "watch"
+  ],
+  "watchPatterns": [
+    "app/**/*"
+  ]
+}

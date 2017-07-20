@@ -1,0 +1,31 @@
+<ion-view class="itemView teamsView" view-title="{{item.title | translate}}" ng-style="{ 'background-color': item.color }">
+	<div class="center-content animated slideInUp IconBig">
+        <i class="scroll icon {{item.icon}} animated fadeOut" style="font-size:22em;color:white;"></i>
+    </div>
+    <ion-content class="animated bounceInUp">
+		<div class="list card">
+			<a class="item item-image" ui-sref="app.teams.chat">
+				<img src="img/pokevision-t.png">
+				<img src="img/trio.png">
+			</a>
+		</div>
+        <div class="list card">
+			<a class="item item-image" ui-sref="app.teams.chat({ team: 'instinct' })">
+				<img src="img/pokevision-t.png">
+				<img src="img/instinct.png">
+			</a>
+		</div>
+		<div class="list card">
+			<a class="item item-image" ui-sref="app.teams.chat({ team: 'mystic' })">
+				<img src="img/pokevision-t.png">
+				<img src="img/mystic.png">
+			</a>
+		</div>
+		<div class="list card">
+			<a class="item item-image" ui-sref="app.teams.chat({ team: 'valor' })">
+				<img src="img/pokevision-t.png">
+				<img src="img/valor.png">
+			</a>
+		</div>
+    </ion-content>
+</ion-view>

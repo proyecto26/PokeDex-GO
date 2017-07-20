@@ -1,0 +1,55 @@
+.homeView {
+    background: linear-gradient(145deg, #206AA7, #00508D, #002F57, #442144);
+    background-size: 800% 800%;
+    animation: background 26s ease infinite;
+
+    .bar-subheader{
+        top: 106px !important;
+    }
+
+    .item {
+        padding:3px;
+    }
+}
+
+@keyframes background {
+    0% {
+        background-position: 1% 0%
+    }
+    50% {
+        background-position: 99% 100%
+    }
+    100% {
+        background-position: 1% 0%
+    }
+}
+
+ion-item:hover {
+    color: #dbdbdb!important;
+}
+
+.ButtonBlue {
+    padding: 15px 25px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    position:relative;
+    
+    background-color: #28AAFD!important;
+}
+
+.ButtonBlue:hover {
+    background-color: #2d9adf!important;
+}
+
+.ButtonBlue:active {
+    -webkit-box-shadow: 0px 1px 0px #13527A!important;
+    -moz-box-shadow: 0px 1px 0px #13527A!important;
+    box-shadow: 0px 1px 0px #13527A!important;
+    position: relative;
+    top: 2px;
+}
+
+.activated {
+    opacity: 1!important;
+}

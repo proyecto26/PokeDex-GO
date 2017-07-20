@@ -1,0 +1,54 @@
+{
+  "name": "App",
+  "private": true,
+  "preen": {
+    "angular-elastic": [
+      "*.js"
+    ],
+    "angular-moment": [
+      "*.js",
+      "*.map"
+    ],
+    "angular-translate": [
+      "*min.js"
+    ],
+    "angular-translate-loader-static-files": [
+      "*min.js"
+    ],
+    "angularfire": [
+      "dist/*.js"
+    ],
+    "Autolinker.js": [
+      "dist/*.js"
+    ],
+    "firebase": [
+      "*.js",
+      "*.map"
+    ],
+    "geofire": [
+      "dist/*.js"
+    ],
+    "moment": [
+      "min/*.js"
+    ],
+    "ng-cordova-oauth": [
+      "dist/*.js"
+    ],
+    "ngCordova": [
+      "dist/*.js"
+    ]
+  },
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#master",
+    "angular-translate": "^2.11.1",
+    "angular-translate-loader-static-files": "^2.11.1",
+    "ng-cordova-oauth": "^0.2.10",
+    "geofire": "^4.1.1",
+    "Autolinker.js": "^0.27.0",
+    "angular-elastic": "^2.5.1",
+    "angular-moment": "^0.10.3"
+  },
+  "devDependencies": {
+    "angularfire": "^2.0.1"
+  }
+}

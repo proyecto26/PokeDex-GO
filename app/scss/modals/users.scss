@@ -1,0 +1,22 @@
+.usersModal{
+	.title, .item{
+		font-family: 'Jura';
+	}
+	.title{
+		font-size: 26px;
+		font-weight: bold;
+	}
+	
+	.item{
+		font-size: 20px;
+	}
+	
+    .animate-item.ng-enter {
+		animation: fadeInLeft 1s;
+	}
+
+	.animate-item.ng-enter-stagger {
+		animation-delay:200ms;		
+		animation-duration:0;
+	}
+}
