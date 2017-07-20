@@ -23,7 +23,6 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 
 - Icons created by Roundicons Freebies (CC BY 3.0): http://www.flaticon.com/packs/pokemon-go
 - CSS Isometric Pokemon: https://codepen.io/littleginger/pen/avWEGN
-- Pokeballs: https://codepen.io/acjdesigns/pen/LkBxQw
 - Loading: http://codepen.io/michito/pen/NAYPvP
 - Developer: Juan David Nicholls Cardona - Medellín / Colombia.
 
