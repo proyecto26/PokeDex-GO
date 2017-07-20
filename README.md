@@ -1,5 +1,11 @@
 # PokéDex GO
 
+<img src="resources/screenshots/home.png" width="200">|
+<img src="resources/screenshots/auth.png" width="200">|
+<img src="resources/screenshots/chat.png" width="200">|
+<img src="resources/screenshots/photo.png" width="200">
+:---: |:---: |:---: |:---: |
+
 Hello! I'm the Professor Oak, I am creating this app so you can start your Pokémon adventures, and nothing better to be part of a community of Pokémon trainers.
 
 I want you to help me grow the community and have incredible adventures together!
