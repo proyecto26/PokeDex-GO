@@ -6,6 +6,10 @@
 <img src="resources/screenshots/photo.png" width="200">
 :---: |:---: |:---: |:---: |
 
+# Demo
+Do you want to see this app in action?
+* Preview the app using **[Ionic View App](http://view.ionic.io/)** with the ID: 8d5cd27d
+
 Hello! I'm the Professor Oak, I am creating this app so you can start your Pokémon adventures, and nothing better to be part of a community of Pokémon trainers.
 
 I want you to help me grow the community and have incredible adventures together!
