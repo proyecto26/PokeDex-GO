@@ -1,4 +1,4 @@
-# PokéDex GO
+# PokéDex GO - Community
 
 <img src="resources/screenshots/home.png" width="200">|
 <img src="resources/screenshots/auth.png" width="200">|
