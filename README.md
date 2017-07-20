@@ -26,7 +26,11 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 - Loading: http://codepen.io/michito/pen/NAYPvP
 - Developer: Juan David Nicholls Cardona - Medellín / Colombia.
 
-# Happy coding
+## Supporting
+I believe in Unicorns 🦄
+Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+
+## Happy coding
 Made with <3
 
 <img width="150px" src="http://phaser.azurewebsites.net/assets/nicholls.png" align="right">
