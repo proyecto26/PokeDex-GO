@@ -32,6 +32,12 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 - Loading: http://codepen.io/michito/pen/NAYPvP
 - Developer: Juan David Nicholls Cardona - Medellín / Colombia.
 
+## Other Projects
+- **[Ionic Starter Template](http://market.ionic.io/starters/ionic-starter-template)**
+- **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
+- **[Ionic Drag and Drop](https://github.com/jdnichollsc/Ionic-Drag-and-Drop)**
+- **[Game of Drones](https://github.com/jdnichollsc/Game-of-Drones)**
+
 ## Supporting
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
