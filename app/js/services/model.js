@@ -5,11 +5,10 @@
 		.module('App')
 		.factory('Model', Model);
 
-	Model.$inject = ['Users', 'Geolocation', 'Auth', 'Network', 'Admob', 'Audio', 'Chat', 'Loader', 'Media', 'Modals', 'Store'];
-	function Model(Users, Geolocation, Auth, Network, Admob, Audio, Chat, Loader, Media, Modals, Store) {
+	Model.$inject = ['Geolocation', 'Auth', 'Network', 'Admob', 'Audio', 'Chat', 'Loader', 'Media', 'Modals', 'Store'];
+	function Model(Geolocation, Auth, Network, Admob, Audio, Chat, Loader, Media, Modals, Store) {
 
 		return {
-			Users: Users,
 			Geolocation: Geolocation,
 			Auth: Auth,
 			Network: Network,

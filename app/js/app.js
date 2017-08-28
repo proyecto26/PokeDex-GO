@@ -18,6 +18,15 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
         '$filter',
         function ($ionicPlatform, $animate, myConfig, Admob, Store, amMoment, $rootScope, $ionicDeploy, $cordovaToast, $ionicPopup, $filter) {
 
+            var showAlert = function(msg){
+                if(window.cordova){
+                    $cordovaToast.showShortBottom(msg);
+                }
+                else{
+                    alert(msg);
+                }
+            }
+            
             $ionicPlatform.ready(function () {
                 if (window.cordova && window.cordova.plugins.Keyboard) {
                     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -42,7 +51,7 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                 //Configure code push
                 var $translate = $filter('translate');
                 $ionicDeploy.channel = 'dev';
-                $cordovaToast.showShortBottom('Checking new versions...');
+                showAlert('Checking new versions...');
                 $ionicDeploy.check().then(function(snapshotAvailable) {
                     if (snapshotAvailable) {
                         $ionicDeploy.download().then(function() {
@@ -59,20 +68,20 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                                         text: $translate('restart'),
                                         onTap: function() {
                                             $ionicDeploy.load().then(function(){
-                                                $cordovaToast.showShortBottom($translate('restarting'));
+                                                showAlert($translate('restarting'));
                                             }).cacth(function(err){
-                                                $cordovaToast.showShortBottom(err);
+                                                showAlert(err);
                                             })
                                         }
                                     }
                                 ]
                             });
                         }).cacth(function(err){
-                            $cordovaToast.showShortBottom(err);
+                            showAlert(err);
                         });
                     }
                 }).cacth(function(err){
-                    $cordovaToast.showShortBottom(err);
+                    showAlert(err);
                 });
             });
 
