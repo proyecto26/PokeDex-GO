@@ -53,7 +53,6 @@ gulp.task('sass', function(done) {
 
 gulp.task('index', function() {
     return gulp.src(paths.index)
-        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("./www/"))
         .pipe(notify({ message: 'Index built' }));
 });

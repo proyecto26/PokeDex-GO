@@ -5,8 +5,8 @@
         .module('App')
         .controller('AppController', AppController);
 
-    AppController.$inject = ['$scope', 'myConfig', 'Ionic', 'Model', 'Angular', '$ionicDeploy'];
-    function AppController($scope, myConfig, Ionic, Model, Angular, $ionicDeploy) {
+    AppController.$inject = ['$scope', 'myConfig', 'Ionic', 'Model', 'Angular'];
+    function AppController($scope, myConfig, Ionic, Model, Angular) {
         
         var $translate = Angular.$filter('translate');
 
@@ -161,32 +161,5 @@
         };
 
         Model.Audio.preload('pikapi');
-
-        /*ionic.Platform.ready(function(){
-            $ionicDeploy.channel = 'dev';
-            $ionicDeploy.check().then(function(snapshotAvailable) {
-                if (snapshotAvailable) {
-                    $ionicDeploy.download().then(function() {
-                        return $ionicDeploy.extract();
-                    }).then(function() {
-                        Ionic.$ionicPopup.show({
-                            title: $translate('cancelText'),
-                            subTitle: $translate('updateDownloaded'),
-                            buttons: [
-                                { 
-                                    text: $translate('notNow') 
-                                },
-                                {
-                                    text: $translate('restart'),
-                                    onTap: function() {
-                                        $ionicDeploy.load();
-                                    }
-                                }
-                            ]
-                        });
-                    });
-                }
-            });
-        });*/
     }
 })();

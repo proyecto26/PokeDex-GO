@@ -13,7 +13,8 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
         'Store',
         'amMoment',
         '$rootScope',
-        function ($ionicPlatform, $sqliteService, $animate, myConfig, Admob, Store, amMoment, $rootScope) {
+        '$ionicDeploy',
+        function ($ionicPlatform, $sqliteService, $animate, myConfig, Admob, Store, amMoment, $rootScope, $ionicDeploy) {
 
             $ionicPlatform.ready(function () {
                 if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -38,6 +39,32 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
 
                 //Initialize Store
                 Store.initialize();
+
+                //Configure code push
+                $ionicDeploy.channel = 'dev';
+                $ionicDeploy.check().then(function(snapshotAvailable) {
+                    if (snapshotAvailable) {
+                        $ionicDeploy.download().then(function() {
+                            return $ionicDeploy.extract();
+                        }).then(function() {
+                            Ionic.$ionicPopup.show({
+                                title: $translate('cancelText'),
+                                subTitle: $translate('updateDownloaded'),
+                                buttons: [
+                                    { 
+                                        text: $translate('notNow') 
+                                    },
+                                    {
+                                        text: $translate('restart'),
+                                        onTap: function() {
+                                            $ionicDeploy.load();
+                                        }
+                                    }
+                                ]
+                            });
+                        });
+                    }
+                });
             });
 
             //Enable Angular animation
