@@ -31,5 +31,6 @@
     "updateAvailable": "Actualización disponible",
     "updateDownloaded": "Se ha descargado una actualización. ¿Desea reiniciar su aplicación para utilizar las funciones más recientes?",
     "notNow": "No ahora",
-    "restart": "Reiniciar"
+    "restart": "Reiniciar",
+    "restarting": "Reiniciando..."
 }

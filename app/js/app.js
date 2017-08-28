@@ -6,7 +6,6 @@
 angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascalprecht.translate', 'ngCordovaOauth', 'firebase', 'monospaced.elastic', 'angularMoment'])
 
     .run(['$ionicPlatform',
-        '$sqliteService',
         '$animate',
         'myConfig',
         'Admob',
@@ -14,7 +13,10 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
         'amMoment',
         '$rootScope',
         '$ionicDeploy',
-        function ($ionicPlatform, $sqliteService, $animate, myConfig, Admob, Store, amMoment, $rootScope, $ionicDeploy) {
+        '$cordovaToast',
+        '$ionicPopup',
+        '$filter',
+        function ($ionicPlatform, $animate, myConfig, Admob, Store, amMoment, $rootScope, $ionicDeploy, $cordovaToast, $ionicPopup, $filter) {
 
             $ionicPlatform.ready(function () {
                 if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -31,9 +33,6 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                     StatusBar.styleDefault();
                 }
 
-                //Load the Pre-populated database, debug = true
-                $sqliteService.preloadDataBase(true);
-
                 //Prepare Admob
                 Admob.prepare();
 
@@ -41,13 +40,15 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                 Store.initialize();
 
                 //Configure code push
+                var $translate = $filter('translate');
                 $ionicDeploy.channel = 'dev';
+                $cordovaToast.showShortBottom('Checking new versions...');
                 $ionicDeploy.check().then(function(snapshotAvailable) {
                     if (snapshotAvailable) {
                         $ionicDeploy.download().then(function() {
                             return $ionicDeploy.extract();
                         }).then(function() {
-                            Ionic.$ionicPopup.show({
+                            $ionicPopup.show({
                                 title: $translate('cancelText'),
                                 subTitle: $translate('updateDownloaded'),
                                 buttons: [
@@ -57,13 +58,21 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                                     {
                                         text: $translate('restart'),
                                         onTap: function() {
-                                            $ionicDeploy.load();
+                                            $ionicDeploy.load().then(function(){
+                                                $cordovaToast.showShortBottom($translate('restarting'));
+                                            }).cacth(function(err){
+                                                $cordovaToast.showShortBottom(err);
+                                            })
                                         }
                                     }
                                 ]
                             });
+                        }).cacth(function(err){
+                            $cordovaToast.showShortBottom(err);
                         });
                     }
+                }).cacth(function(err){
+                    $cordovaToast.showShortBottom(err);
                 });
             });
 

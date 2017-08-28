@@ -32,5 +32,6 @@
     "updateAvailable": "Update available",
     "updateDownloaded": "An update was just downloaded. Would you like to restart your app to use the latest features?",
     "notNow": "Not now",
-    "restart": "Restart"
+    "restart": "Restart",
+    "restarting": "Restarting..."
 }

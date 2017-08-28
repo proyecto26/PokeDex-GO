@@ -7,5 +7,9 @@
     "app/**/*"
   ],
   "app_id": "8d5cd27d",
-  "type": "ionic1"
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  }
 }
