@@ -51,14 +51,14 @@ angular.module('App', ['ionic', 'ionic.cloud', 'ngCordova', 'ngAnimate', 'pascal
                 //Configure code push
                 var $translate = $filter('translate');
                 $ionicDeploy.channel = 'dev';
-                showAlert('Checking new versions...');
+                showAlert($translate('checkNewVersions'));
                 $ionicDeploy.check().then(function(snapshotAvailable) {
                     if (snapshotAvailable) {
                         $ionicDeploy.download().then(function() {
                             return $ionicDeploy.extract();
                         }).then(function() {
                             $ionicPopup.show({
-                                title: $translate('cancelText'),
+                                title: $translate('updateAvailable'),
                                 subTitle: $translate('updateDownloaded'),
                                 buttons: [
                                     { 
