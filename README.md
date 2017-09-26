@@ -42,6 +42,7 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 - **Chat** with **Realtime location queries** with Firebase using **GeoFire**.
 - ActionSheet to upload images (Converting the base64 to Blob) using **Firebase Storage**.
 - Checking the Network to **reconnect** (Supporting timeout).
+- Deploy mobile app updates using **[Ionic Deploy](https://docs.ionic.io/services/deploy/)**
 - **Multi-Language** Support.
 - Beautiful animations with **CSS3**!
 
