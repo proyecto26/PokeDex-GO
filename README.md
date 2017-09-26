@@ -32,6 +32,19 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 - Loading: http://codepen.io/michito/pen/NAYPvP
 - Developer: Juan David Nicholls Cardona - Medellín / Colombia.
 
+## Features
+
+- **In-App Purchase** to **Remove Ads**.
+- Mobile App Monetization & **In App Advertising** with **Google AdMob**.
+- Native Audio **(Click to Pikachu!)**.
+- **Geolocation** to get the current position.
+- **Google Native Authentication** with **Firebase** (Browser is supported too).
+- **Chat** with **Realtime location queries** with Firebase using **GeoFire**.
+- ActionSheet to upload images (Converting the base64 to Blob) using **Firebase Storage**.
+- Checking the Network to **reconnect** (Supporting timeout).
+- **Multi-Language** Support.
+- Beautiful animations with **CSS3**!
+
 ## Other Projects
 - **[Ionic Starter Template](http://market.ionic.io/starters/ionic-starter-template)**
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
