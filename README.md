@@ -39,7 +39,7 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 - **[Native Audio](https://github.com/floatinghotpot/cordova-plugin-nativeaudio)** **(Click to Pikachu!)**.
 - **Geolocation** to get the current position.
 - **Google Native Authentication** with **Firebase** (Browser is supported too).
-- **Chat** with **Realtime location queries** with Firebase using **GeoFire**.
+- **Chat** with channels and **Realtime location queries** with Firebase using **GeoFire**.
 - ActionSheet to upload images (Converting the base64 to Blob) using **Firebase Storage**.
 - Checking the Network to **reconnect** (Supporting timeout).
 - Deploy mobile app updates using **[Ionic Deploy](https://docs.ionic.io/services/deploy/)** **(Live deployments with CodePush)**.
