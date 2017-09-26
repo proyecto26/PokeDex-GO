@@ -34,9 +34,9 @@ The application has been built with Web technologies HTML, CSS and Javascript us
 
 ## Features
 
-- **In-App Purchase** to **Remove Ads**.
-- Mobile App Monetization & **In App Advertising** with **Google AdMob**.
-- Native Audio **(Click to Pikachu!)**.
+- **[In-App Purchase](https://github.com/j3k0/cordova-plugin-purchase)** to **Remove Ads**.
+- Mobile App Monetization & **In App Advertising** with **[Google AdMob](https://github.com/floatinghotpot/cordova-admob-pro)**.
+- **[Native Audio](https://github.com/floatinghotpot/cordova-plugin-nativeaudio)** **(Click to Pikachu!)**.
 - **Geolocation** to get the current position.
 - **Google Native Authentication** with **Firebase** (Browser is supported too).
 - **Chat** with **Realtime location queries** with Firebase using **GeoFire**.
