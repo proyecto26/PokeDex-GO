@@ -1,4 +1,9 @@
 # PokéDex GO - Community
+<p align="center">
+  <img align="center" alt="PokéDex GO logo" src="./app/img/logo.png" />
+</p>
+
+## Screens
 
 <img src="resources/screenshots/home.png" width="200">|
 <img src="resources/screenshots/auth.png" width="200">|
