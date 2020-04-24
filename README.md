@@ -5,11 +5,22 @@
 
 ## Screens
 
-<img src="resources/screenshots/home.png" width="200">|
-<img src="resources/screenshots/auth.png" width="200">|
-<img src="resources/screenshots/chat.png" width="200">|
-<img src="resources/screenshots/photo.png" width="200">
-:---: |:---: |:---: |:---: |
+<table>
+  <tr>
+    <td>
+      <img src="resources/screenshots/home.png" width="200">
+    </td>
+    <td>
+      <img src="resources/screenshots/auth.png" width="200">
+    </td>
+    <td>
+      <img src="resources/screenshots/chat.png" width="200">
+    </td>
+    <td>
+      <img src="resources/screenshots/photo.png" width="200">
+    </td>
+  </tr>
+</table>
 >Images are created using [LaunchKit](https://github.com/launchkit/launchkit)
 
 ## Introduction
