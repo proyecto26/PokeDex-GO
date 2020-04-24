@@ -21,7 +21,8 @@
     </td>
   </tr>
 </table>
->Images are created using [LaunchKit](https://github.com/launchkit/launchkit)
+
+> Images are created using [LaunchKit](https://github.com/launchkit/launchkit)
 
 ## Introduction
 Hello! I'm the Professor Oak, I am creating this app so you can start your Pokémon adventures, and nothing better to be part of a community of Pokémon trainers.
